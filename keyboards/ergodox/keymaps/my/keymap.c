@@ -166,6 +166,7 @@ void matrix_scan_user(void) {
     ergodox_right_led_1_off();
     ergodox_right_led_2_off();
     ergodox_right_led_3_off();
+    ergodox_led_all_set(LED_BRIGHTNESS_LO);
     switch (layer) {
       // TODO: Make this relevant to the ErgoDox EZ.
         case 1:
