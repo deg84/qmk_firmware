@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  |   Grv  |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | LAlt | LGui |      |      | LGui |                                       | RGui | RAlt |   [  |   ]  | ~L2  |
+ *   | LAlt | LGui |      |      |  EN  |                                       |JA/GUI| RAlt |   [  |   ]  | ~L2  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |      |       |      | ESC  |
@@ -37,17 +37,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,   KC_Q,     KC_W,   KC_E,   KC_R,     KC_T,  KC_Y,
         KC_LCTL,  KC_A,     KC_S,   KC_D,   KC_F,     KC_G,
         KC_LSFT,  KC_Z,     KC_X,   KC_C,   KC_V,     KC_B,  ALL_T(KC_NO),
-        KC_LALT,  KC_LGUI,  KC_NO,  KC_NO,  KC_LGUI,
+        KC_LALT,  KC_LGUI,  KC_NO,  KC_NO,  KC_LANG2,
                                                     KC_NO,    KC_NO,
                                                               KC_NO,
                                     GUI_T(KC_SPC),  KC_BSPC,  KC_NO,
 
                                                                           // right hand
-                                                                                KC_NO,  KC_6,   KC_7,     KC_8,     KC_9,     KC_0,   KC_MINS,
+                                                                                  KC_NO,  KC_6,   KC_7,     KC_8,     KC_9,     KC_0,   KC_MINS,
                                                                                TG(SYMB),  KC_Y,   KC_U,     KC_I,     KC_O,     KC_P,   KC_BSLS,
                                                                                           KC_H,   KC_J,     KC_K,     KC_L,  KC_SCLN,   KC_QUOT,
                                                                            MEH_T(KC_NO),  KC_N,   KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,    KC_GRV,
-                                                                                               KC_RGUI,  KC_RALT,  KC_LBRC,  KC_RBRC,  TG(MDIA),
+                                                                                       GUI_T(KC_LANG1),  KC_RALT,  KC_LBRC,  KC_RBRC,  TG(MDIA),
                                                                                KC_NO,   KC_ESC,
                                                                                KC_NO,
                                                                                KC_NO,   KC_DELT,  CTL_T(KC_ENT)
