@@ -5,7 +5,6 @@
 
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
-#define MDIA 2 // media keys
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
@@ -19,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   /  |   Grv  |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | LAlt | LGui |      |      |  EN  |                                       |JA/GUI| RAlt |   [  |   ]  | ~L2  |
+ *   | LAlt | LGui |      |      |  EN  |                                       |JA/GUI| RAlt |   [  |   ]  |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |      |       |      | ESC  |
@@ -47,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                TG(SYMB),  KC_Y,   KC_U,     KC_I,     KC_O,     KC_P,   KC_BSLS,
                                                                                           KC_H,   KC_J,     KC_K,     KC_L,  KC_SCLN,   KC_QUOT,
                                                                            MEH_T(KC_NO),  KC_N,   KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,    KC_GRV,
-                                                                                       GUI_T(KC_LANG1),  KC_RALT,  KC_LBRC,  KC_RBRC,  TG(MDIA),
+                                                                                       GUI_T(KC_LANG1),  KC_RALT,  KC_LBRC,  KC_RBRC,     KC_NO,
                                                                                KC_NO,   KC_ESC,
                                                                                KC_NO,
                                                                                KC_NO,   KC_DELT,  CTL_T(KC_ENT)
@@ -93,47 +92,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS, KC_TRNS,
        KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS
-),
-/* Keymap 2: Media and mouse keys
- *
- * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
- * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        |      |      | MsUp |      |      |      |           |      |      |      |      |      |      |        |
- * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      |MsLeft|MsDown|MsRght|      |------|           |------|      |      |      |      |      |  Play  |
- * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |           |      |      |      | Prev | Next |      |        |
- * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      |      | Lclk | Rclk |                                       |VolUp |VolDn | Mute |      |      |
- *   `----------------------------------'                                       `----------------------------------'
- *                                        ,-------------.       ,-------------.
- *                                        |      |      |       |      |      |
- *                                 ,------|------|------|       |------+------+------.
- *                                 |      |      |      |       |      |      |Brwser|
- *                                 |      |      |------|       |------|      |Back  |
- *                                 |      |      |      |       |      |      |      |
- *                                 `--------------------'       `--------------------'
- */
-// MEDIA AND MOUSE
-[MDIA] = KEYMAP(
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_MS_U, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_MS_L, KC_MS_D, KC_MS_R, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_BTN1, KC_BTN2,
-                                           KC_TRNS, KC_TRNS,
-                                                    KC_TRNS,
-                                  KC_TRNS, KC_TRNS, KC_TRNS,
-    // right hand
-       KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-       KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MPLY,
-       KC_TRNS,  KC_TRNS, KC_TRNS, KC_MPRV, KC_MNXT, KC_TRNS, KC_TRNS,
-                          KC_VOLU, KC_VOLD, KC_MUTE, KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS,
-       KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_WBAK
 ),
 };
 
