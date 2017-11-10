@@ -4,7 +4,7 @@
 #include "version.h"
 
 #define BASE 0 // default layer
-#define WIN  1 // windows default layer
+#define MAC  1 // macOS default layer
 #define FN   2 // functions layer
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  , < |  . > |  / ? | ] }/SFT|
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | Ctrl | LAlt | LGui |      | LGUI |                                       | RGUI | RAlt |      |  \ | |  = + |
+ *   | Ctrl | LAlt | LGui |      | Ctrl |                                       | RGUI | RAlt |      |  \ | |  = + |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |  L1  |       |  L2  |      |
@@ -37,9 +37,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,   KC_Q,     KC_W,     KC_E,   KC_R,     KC_T,  KC_NO,
   KC_LCTL,  KC_A,     KC_S,     KC_D,   KC_F,     KC_G,
   KC_LSFT,  KC_Z,     KC_X,     KC_C,   KC_V,     KC_B,  KC_NO,
-  KC_LCTL,  KC_LALT,  KC_LGUI,  KC_NO,  KC_LGUI,
+  KC_LCTL,  KC_LALT,  KC_LGUI,  KC_NO,  KC_LCTL,
 
-                                              KC_NO,    TG(WIN),
+                                              KC_NO,    TG(MAC),
                                                         KC_NO,
                                      KC_SPC,  KC_BSPC,  KC_LBRC,
 
@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                        KC_NO,
                                                                        KC_RBRC,  KC_NO,  LT(FN, KC_ENT)
 ),
-/* Keymap 1: Windows layer
+/* Keymap 1: macOS layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      |      |      | Ctrl |                                       |      |      |      |      |      |
+ *   |      |      |      |      | LGUI |                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |      |       |      |      |
@@ -77,13 +77,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
-[WIN] = KEYMAP(  // layer 0 : default
+[MAC] = KEYMAP(  // layer 0 : default
   // left hand
   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
   KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_LCTL,
+  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_LGUI,
 
                                                     KC_TRNS,  KC_TRNS,
                                                               KC_TRNS,
