@@ -21,15 +21,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
    * | Sft  |   Z  |   X  |   C  |   V  |   B  |  {   |   |   }  |   N  |   M  |   ,  |   .  |   /  |\/Sft |
    * |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
-   * | Ctrl | GUI  |      |      |ESC/  |Space/|Back  |   |Back  |Enter/| Del  |      |=>GAME|=>SYMB|   =  |
-   * |      |      |      |      |~SYMB |RCtrl |Space |   |Space |~META |      |      |      |      |      |
+   * | Ctrl | GUI  |      |      |ESC/  |Space/|BS/   |   |Back  |Enter/| Del  |      |=>GAME|=>SYMB|   =  |
+   * |      |      |      |      |~SYMB |RCtrl |~META |   |Space |~META |      |      |      |      |      |
    * `------------------------------------------------'   `------------------------------------------------'
    */
   [BASE] = LAYOUT( \
-    KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,             KC_T,           KC_LBRC,    KC_RBRC,    KC_Y,             KC_U,    KC_I,     KC_O,     KC_P,     KC_MINS, \
-    KC_LALT,  KC_A,    KC_S,    KC_D,    KC_F,             KC_G,           S(KC_9),    S(KC_0),    KC_H,             KC_J,    KC_K,     KC_L,     KC_SCLN,  KC_QUOT, \
-    KC_LSFT,  KC_Z,    KC_X,    KC_C,    KC_V,             KC_B,           S(KC_LBRC), S(KC_RBRC), KC_N,             KC_M,    KC_COMM,  KC_DOT,   KC_SLSH,  SFT_T(KC_BSLS), \
-    KC_LCTRL, KC_LGUI, XXXXXXX, XXXXXXX, LT(SYMB, KC_ESC), RCTL_T(KC_SPC), KC_BSPC,    KC_BSPC,    LT(META, KC_ENT), KC_DELT, XXXXXXX,  TG(GAME), TG(SYMB), KC_EQL \
+    KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,             KC_T,           KC_LBRC,           KC_RBRC,    KC_Y,             KC_U,    KC_I,     KC_O,     KC_P,     KC_MINS, \
+    KC_LALT,  KC_A,    KC_S,    KC_D,    KC_F,             KC_G,           S(KC_9),           S(KC_0),    KC_H,             KC_J,    KC_K,     KC_L,     KC_SCLN,  KC_QUOT, \
+    KC_LSFT,  KC_Z,    KC_X,    KC_C,    KC_V,             KC_B,           S(KC_LBRC),        S(KC_RBRC), KC_N,             KC_M,    KC_COMM,  KC_DOT,   KC_SLSH,  SFT_T(KC_BSLS), \
+    KC_LCTRL, KC_LGUI, XXXXXXX, XXXXXXX, LT(SYMB, KC_ESC), RCTL_T(KC_SPC), LT(META, KC_BSPC), KC_BSPC,    LT(META, KC_ENT), KC_DELT, XXXXXXX,  TG(GAME), TG(SYMB), KC_EQL \
   ),
 
   /* META
@@ -40,8 +40,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
    * | Sft  |  F1  |  F2  |  F3  |  F4  |  F5  | F11  |   | F12  |  F6  |  F7  |  F8  |  F9  | F10  |\/Sft |
    * |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
-   * | Ctrl | GUI  |      |      |ESC/  |Space/|Back  |   |Back  |Enter/| Del  |Reset |=>GAME|=>SYMB|   =  |
-   * |      |      |      |      |~SYMB |RCtrl |Space |   |Space |~META |      |      |      |      |      |
+   * | Ctrl | GUI  |      |      |ESC/  |Space/|BS/   |   |Back  |Enter/| Del  |Reset |=>GAME|=>SYMB|   =  |
+   * |      |      |      |      |~SYMB |RCtrl |~META |   |Space |~META |      |      |      |      |      |
    * `------------------------------------------------'   `------------------------------------------------'
    */
   [META] = LAYOUT( \
@@ -55,17 +55,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,------------------------------------------------.   ,------------------------------------------------.
    * |   ~  |   !  |   @  |   #  |   $  |   %  |  [   |   |   ]  |   ^  |   &  |   *  |   (  |   )  |   _  |
    * |------+------+------+------+------+------+------|   |-------------+------+------+------+------+------|
-   * | Alt  |      |      |      |      |      |  (   |   |   )  |      |      |      |      |   :  |   "  |
+   * | Alt  |      |      |Muhen | Henk |      |  (   |   |   )  |      |      |      |      |   :  |   "  |
    * |------+------+------+------+------+------+------|   |------|------+------+------+------+------+------|
    * | Sft  |      |      |      |      |      |  {   |   |   }  |      |      |   <  |   >  |   ?  |   \  |
    * |------+------+------+------+------+------+------|   |------+------+------+------+------+------+------|
-   * | Ctrl | GUI  |      |      |ESC/  |Space/|Back  |   |Back  |Enter/|      |      |=>GAME|=>SYMB|   +  |
-   * |      |      |      |      |~SYMB |RCtrl |Space |   |Space |~META |      |      |      |      |      |
+   * | Ctrl | GUI  |      |      |ESC/  |Space/|BS/   |   |Back  |Enter/|      |      |=>GAME|=>SYMB|   +  |
+   * |      |      |      |      |~SYMB |RCtrl |~META |   |Space |~META |      |      |      |      |      |
    * `------------------------------------------------'   `------------------------------------------------'
    */
   [SYMB] = LAYOUT( \
     S(KC_GRV), S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5), _______, _______, S(KC_6), S(KC_7), S(KC_8),    S(KC_9),   S(KC_0),    S(KC_MINS), \
-    _______,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,   S(KC_SCLN), S(KC_QUOT), \
+    _______,   XXXXXXX, XXXXXXX, KC_MHEN, KC_HENK, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,   S(KC_SCLN), S(KC_QUOT), \
     _______,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, S(KC_COMM), S(KC_DOT), S(KC_SLSH), S(KC_BSLS), \
     _______,   _______, XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, XXXXXXX, XXXXXXX,    _______,   _______,    S(KC_EQL) \
   ),
