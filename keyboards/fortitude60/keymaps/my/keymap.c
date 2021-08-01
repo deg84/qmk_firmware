@@ -121,6 +121,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 layer_state_t layer_state_set_user(layer_state_t state) {
+  // レイヤー毎にLEDの色を変える
+  switch (biton32(state)) {
+  case _GAME:
+    rgblight_enable_noeeprom();
+    rgblight_sethsv_noeeprom(100, 255, 50);
+    break;
+  default:
+    rgblight_disable_noeeprom();
+    break;
+  }
+
   return update_tri_layer_state(state, _META, _GAME, _ADJUST);
 }
 
