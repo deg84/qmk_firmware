@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        |      |      |       |      | ESC  |
  *                                 ,------|------|------|       |------+------+------.
  *                                 |      |      |      |       |      |      |      |
- *                                 | Space|Backsp|------|       |------|      | Enter|
+ *                                 | Space|Backsp|------|       |------| Del  | Enter|
  *                                 |      |ace   |      |       |      |      | /Ctrl|
  *                                 `--------------------'       `--------------------'
  */
@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                                KC_RGUI,  KC_RALT,  KC_LBRC,  KC_RBRC,  TG(MDIA),
                                                                                KC_NO,   KC_ESC,
                                                                                KC_NO,
-                                                                               KC_NO,    KC_NO,  CTL_T(KC_ENT)
+                                                                               KC_NO,   KC_DELT,  CTL_T(KC_ENT)
     ),
 /* Keymap 1: Symbol Layer
  *
