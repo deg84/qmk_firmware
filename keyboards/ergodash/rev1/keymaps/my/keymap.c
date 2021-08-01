@@ -15,7 +15,6 @@ enum custom_keycodes {
 };
 
 #define KC_SCTL RCTL_T(KC_SPC)
-#define KC_BSMT LT(_META, KC_BSPC)
 #define KC_ETMT LT(_META, KC_ENT)
 #define KC_BSST SFT_T(KC_BSLS)
 #define KC_LRBC S(KC_9)
@@ -36,8 +35,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
    * | Shift|   Z  |   X  |   C  |   V  |   B  | Game |                    |Adjust|   N  |   M  |   ,  |   .  |   /  |\/Sft |
    * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
-   * | Ctrl |  GUI |  Alt |  ESC ||||||||  EN  |Space/|BS/   |||||||| Back |Enter/|  JA  ||||||||      |      |      |      |
-   * |      |      |      |      ||||||||      |RCtrl |~META |||||||| Space|~META |      ||||||||      |      |      |      |
+   * | Ctrl |  GUI |  Alt |  ESC ||||||||  EN  |Space/| Back |||||||| Back |Enter/|  JA  ||||||||      |      |      |      |
+   * |      |      |      |      ||||||||      |RCtrl | Space|||||||| Space|~META |      ||||||||      |      |      |      |
    * ,----------------------------------------------------------------------------------------------------------------------.
    */
   [_BASE] = LAYOUT( \
@@ -45,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    XXXXXXX,                          XXXXXXX, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_EQL , \
     KC_LALT, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_LBRC,                          KC_RBRC, KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_TGGM,                          ADJUST , KC_N,    KC_M,    KC_COMM, KC_DOT , KC_SLSH, KC_BSST, \
-    KC_LCTL, KC_LGUI, KC_LALT, KC_ESC,           KC_MHEN, KC_SCTL, KC_BSMT,        KC_BSPC, KC_ETMT, KC_HENK,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  \
+    KC_LCTL, KC_LGUI, KC_LALT, KC_ESC,           KC_MHEN, KC_SCTL, KC_BSPC,        KC_BSPC, KC_ETMT, KC_HENK,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  \
   ),
 
   /* META
@@ -80,8 +79,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
    * |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
    * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
-   * |      |      |      |  Alt |||||||| Space|      |BS/   ||||||||      |      |      ||||||||      |      |      |      |
-   * |      |      |      |      ||||||||      |      |~META ||||||||      |      |      ||||||||      |      |      |      |
+   * |      |      |      |  Alt |||||||| Space|      | Back ||||||||      |      |      ||||||||      |      |      |      |
+   * |      |      |      |      ||||||||      |      | Space||||||||      |      |      ||||||||      |      |      |      |
    * ,----------------------------------------------------------------------------------------------------------------------.
    */
   [_GAME] = LAYOUT(
@@ -89,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______, KC_Y   ,                        _______, _______, _______, _______, _______, _______, _______, \
     KC_LCTL, _______, _______, _______, _______, _______, KC_H   ,                        _______, _______, _______, _______, _______, _______, _______, \
     _______, _______, _______, _______, _______, _______, _______,                        _______, _______, _______, _______, _______, _______, _______, \
-    _______, _______, _______, KC_LALT,          KC_SPC , _______, KC_BSMT,      _______, _______, _______,          _______, _______, _______, _______  \
+    _______, _______, _______, KC_LALT,          KC_SPC , _______, KC_BSPC,      _______, _______, _______,          _______, _______, _______, _______  \
   ),
 
   /* Adjust
