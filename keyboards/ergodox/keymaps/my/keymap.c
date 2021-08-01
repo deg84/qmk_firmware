@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  , < |  . > |  / ? | ] }/SFT|
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | Ctrl | LAlt | LGui | LAlt |EN/CTL|                                       |Ctrl/J| RAlt |      |  \ | |  = + |
+ *   | Ctrl | LAlt | LGui | LAlt |EN/CTL|                                       |JP/CTL| RAlt |      |  \ | |  = + |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        |      |  L1  |       |  L2  |      |
@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,         KC_Q,     KC_W,     KC_E,     KC_R,           KC_T,  KC_NO,
   LT(FN, KC_NO),  KC_A,     KC_S,     KC_D,     KC_F,           KC_G,
   KC_LSFT,        KC_Z,     KC_X,     KC_C,     KC_V,           KC_B,  KC_NO,
-  KC_LCTL,        KC_LALT,  KC_LGUI,  KC_LALT,  CTL_T(KC_F13),
+  KC_LCTL,        KC_LALT,  KC_LGUI,  KC_LALT,  CTL_T(KC_MHEN),
 
                                               KC_NO,    TG(MAC),
                                                         KC_NO,
@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                             KC_NO,  KC_Y,   KC_U,     KC_I,     KC_O,     KC_P,         KC_LBRC,
                                                                                     KC_H,   KC_J,     KC_K,     KC_L,  KC_SCLN,         KC_QUOT,
                                                                             KC_NO,  KC_N,   KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,  SFT_T(KC_RBRC),
-                                                                                   CTL_T(KC_F14),  KC_RALT,    KC_NO,  KC_BSLS,          KC_EQL,
+                                                                                  CTL_T(KC_HENK),  KC_RALT,    KC_NO,  KC_BSLS,          KC_EQL,
 
                                                                       TG(FN),    KC_NO,
                                                                        KC_NO,
