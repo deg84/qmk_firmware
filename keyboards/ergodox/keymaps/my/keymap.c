@@ -23,9 +23,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                        ,-------------.       ,-------------.
  *                                        |      |  (   |       |   )  | ESC  |
  *                                 ,------|------|------|       |------+------+------.
- *                                 |      |      |  [   |       |   ]  |      |      |
+ *                                 |      |      |  {   |       |   }  |      |      |
  *                                 | Space| Back |------|       |------|      | Enter|
- *                                 | /Gui | Space|  {   |       |   }  |      | /fn  |
+ *                                 | /Gui | Space|  [   |       |   ]  |      | /fn  |
  *                                 `--------------------'       `--------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -39,8 +39,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LT(FN, KC_GRV),  KC_LALT,  KC_LGUI,  KC_NO,  GUI_T(KC_LANG2),
 
                                                     KC_NO,    KC_LPRN,
-                                                              KC_LBRC,
-                                    GUI_T(KC_SPC),  KC_BSPC,  KC_LCBR,
+                                                              KC_LCBR,
+                                    GUI_T(KC_SPC),  KC_BSPC,  KC_LBRC,
 
                                                                           // right hand
                                                                                   KC_NO,  KC_6,   KC_7,     KC_8,     KC_9,     KC_0,         KC_MINS,
@@ -50,8 +50,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                        GUI_T(KC_LANG1),  KC_RALT,    KC_NO,    KC_NO,         KC_BSLS,
 
                                                                              KC_RPRN,  KC_ESC,
-                                                                             KC_RBRC,
-                                                                             KC_RCBR,   KC_NO,  LT(FN, KC_ENT)
+                                                                             KC_RCBR,
+                                                                             KC_RBRC,   KC_NO,  LT(FN, KC_ENT)
     ),
 /* Keymap 1: Functions Layer
  *
