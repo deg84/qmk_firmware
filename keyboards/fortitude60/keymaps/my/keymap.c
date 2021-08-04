@@ -27,6 +27,7 @@ enum custom_keycodes {
 #define KC_LCBC S(KC_LBRC)
 #define KC_RCBC S(KC_RBRC)
 #define KC_TGGM TG(_GAME)
+#define KC_ALEN MT(MOD_LGUI, KC_MHEN)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -40,8 +41,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
    * | Shift|   Z  |   X  |   C  |   V  |   B  |   [  |   ]  |   N  |   M  |   ,  |   .  |   /  |\/Sft |
    * `-------------+------+------+------+------+------+------+------+------+------+------+------+------'
-   *               |  GUI |  Alt |  EN  |Space/| Back | Back |Enter/|  JA  | GAME |  ESC |
-   *               |      |      |      |RCtrl | Space| Space|~META |      |      |      |
+   *               |  GUI |  Alt |  EN/ |Space/| Back | Back |Enter/|  JA  | GAME |  ESC |
+   *               |      |      |  Alt |RCtrl | Space| Space|~META |      |      |      |
    *               `---------------------------------------------------------------------'
    */
   [_BASE] = LAYOUT( \
@@ -49,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q, KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_EQL , \
     KC_LCTL, KC_A, KC_S,    KC_D,    KC_F,    KC_G,                      KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
     KC_LSFT, KC_Z, KC_X,    KC_C,    KC_V,    KC_B,    KC_LBRC, KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_BSST, \
-                   KC_LALT, KC_LGUI, KC_MHEN, KC_SCTL, KC_BSPC, KC_BSPC, KC_ETMT, KC_HENK, KC_TGGM, KC_ESC  \
+                   KC_LALT, KC_LGUI, KC_ALEN, KC_SCTL, KC_BSPC, KC_BSPC, KC_ETMT, KC_HENK, KC_TGGM, KC_ESC  \
   ),
 
   /* META
