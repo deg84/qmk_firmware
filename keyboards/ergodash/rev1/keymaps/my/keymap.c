@@ -22,7 +22,7 @@ enum custom_keycodes {
 #define KC_LCBC S(KC_LBRC)
 #define KC_RCBC S(KC_RBRC)
 #define KC_TGGM TG(_GAME)
-#define KC_ALEN MT(MOD_LGUI, KC_MHEN)
+#define KC_ALEN MT(MOD_LALT, KC_MHEN)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
