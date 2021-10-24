@@ -162,13 +162,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 uint32_t layer_state_set_user(uint32_t state) {
     switch (biton32(state)) {
     case _GAME:
+        rgblight_enable_noeeprom();
+        rgblight_sethsv_noeeprom(100, 255, 50);
         backlight_enable();
         backlight_level(4);
         break;
     case _ADJUST:
+        rgblight_enable_noeeprom();
         backlight_enable();
         break;
     default:
+        rgblight_disable_noeeprom();
         backlight_disable();
         break;
     }
